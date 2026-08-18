@@ -61,6 +61,10 @@
       （st-zhongtai-ic / lugong-investment-master / shanxing-investment-master /
        huishou-utilize-reinvest-expert / sector-equity-research / quant-strategy-lab）
 - [ ] 6 个专家包内 `.codebuddy-plugin/plugin.json` 均可正常读取
+- [ ] 报告管线脚本就位：st-zhongtai-ic 与 sector-equity-research 的
+      `skills/pdf-typesetting/scripts/pipeline/` 下存在 7 个文件
+      （md2html_full.py / md2docx.py / md2pdf_pro.py / generate_pdfs.py /
+       generate_html_report.py / qa_check.py / README.md）
 - [ ] 书籍蒸馏 `06_检索页/index.html` 与 `entries.json` 存在
 - [ ] 书籍蒸馏 `03_观点条目库/S3_规律条目库.md` 存在
 - [ ] 两个技能文件（comps-valuation / industry-analysis-method）内的书籍入口路径已替换为实际绝对路径

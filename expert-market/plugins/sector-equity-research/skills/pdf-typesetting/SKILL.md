@@ -2,7 +2,7 @@
 name: pdf-typesetting
 description: |
   报告 PDF 排版与生成后 QA 标准（强制）。覆盖所有用 reportlab / Markdown→PDF 管线生成的深度报告与一页纸。
-  默认不生成 PDF（2026-08-17 用户拍板），仅显式要求时生成。流水线脚本主版本在 共用/研报管线/。
+  默认不生成 PDF（2026-08-17 用户拍板），仅显式要求时生成。流水线脚本主版本在 scripts/pipeline/（本技能自带，部署后按本地实际路径）。
   触发词：PDF排版、排版不对、表格错位、列宽、一页纸溢出、PDF QA、排版检查、表格太窄
 ---
 
@@ -12,10 +12,10 @@ description: |
 
 ## 〇、默认交付规则（2026-08-17 用户拍板）
 
-- **默认产出 = MD + HTML + Word**（`共用/研报管线/md2html_full.py` / `md2docx.py`）；**PDF 仅在用户显式要求时生成**，禁止默认顺手出 PDF。
-- 深度报告 PDF（封面/目录/缩进齐全）走 `共用/研报管线/md2pdf_pro.py`（xhtml2pdf）；简单版/快速 PDF 走 `共用/研报管线/generate_pdfs.py`（reportlab）。
+- **默认产出 = MD + HTML + Word**（`scripts/pipeline/md2html_full.py（本技能自带，部署后按本地实际路径）` / `md2docx.py`）；**PDF 仅在用户显式要求时生成**，禁止默认顺手出 PDF。
+- 深度报告 PDF（封面/目录/缩进齐全）走 `scripts/pipeline/md2pdf_pro.py（本技能自带，部署后按本地实际路径）`（xhtml2pdf）；简单版/快速 PDF 走 `scripts/pipeline/generate_pdfs.py（本技能自带，部署后按本地实际路径）`（reportlab）。
 - 所有 PDF 生成后必须过本技能 QA 门禁（§二），QA_PASS 才允许交付。
-- **流水线脚本唯一主版本在 `共用/研报管线/`**（`README.md` 为总纲）；历史副本（如 `deliverables/创新药前十成份股研究/` 下同名脚本）仅供存档，禁止再引用为基准。
+- **流水线脚本唯一主版本在 `scripts/pipeline/`（本技能自带，部署后按本地实际路径）**（`README.md` 为总纲）；历史副本（如 `deliverables/创新药前十成份股研究/` 下同名脚本）仅供存档，禁止再引用为基准。
 
 ## 一、排版规范（生成前）
 
@@ -33,7 +33,7 @@ description: |
 
 ## 二、生成后 QA 门禁（必须执行，类比代码 CI）
 
-**优先用自动化审计脚本 `qa_check.py`**（主版本：`共用/研报管线/qa_check.py`，2026-08-17 起为唯一基准；`generate_pdfs.py` / `md2pdf_pro.py` 生成后自动调用，输出 `QA_PASS` 才允许交付）。敏感性审计传参：`--config "名称,股本,单位"`（CNY/HKD/USD）。脚本落地以下检查：
+**优先用自动化审计脚本 `qa_check.py`**（主版本：`scripts/pipeline/qa_check.py（本技能自带，部署后按本地实际路径）`，2026-08-17 起为唯一基准；`generate_pdfs.py` / `md2pdf_pro.py` 生成后自动调用，输出 `QA_PASS` 才允许交付）。敏感性审计传参：`--config "名称,股本,单位"`（CNY/HKD/USD）。脚本落地以下检查：
 
 | 检查项 | 方法 | 通过标准 |
 |---|---|---|
