@@ -20,9 +20,9 @@
 
 1. 将仓库根目录下的 `expert-market/` **整个目录**复制到
    `~/.workbuddy/plugins/marketplaces/expert-market/`
-   （即最终结构为 `marketplaces/expert-market/plugins/{6个专家包}`，`plugins/` 这一层必须保留）。
+   （即最终结构为 `marketplaces/expert-market/plugins/{5个专家包}`，`plugins/` 这一层必须保留）。
 2. 复制完成后，告知用户：**重启 WorkBuddy 使专家市场生效**。
-3. 用户重启后，检查左侧「专家」是否出现 ST众泰投委会等 6 个专家包：
+3. 用户重启后，检查左侧「专家」是否出现 ST众泰投委会等 5 个专家包：
    - 已出现 → 继续第 2 节；
    - 未出现 → 检查 `~/.workbuddy/plugins/known_marketplaces.json` 是否注册了 `expert-market`；
      若未注册，模仿该文件内既有条目的 JSON 格式，追加一条
@@ -57,10 +57,10 @@
 
 逐项检查并记录结果：
 
-- [ ] `~/.workbuddy/plugins/marketplaces/expert-market/plugins/` 下存在 6 个专家包目录
+- [ ] `~/.workbuddy/plugins/marketplaces/expert-market/plugins/` 下存在 5 个专家包目录
       （st-zhongtai-ic / lugong-investment-master / shanxing-investment-master /
-       huishou-utilize-reinvest-expert / sector-equity-research / quant-strategy-lab）
-- [ ] 6 个专家包内 `.codebuddy-plugin/plugin.json` 均可正常读取
+       huishou-utilize-reinvest-expert / sector-equity-research）
+- [ ] 5 个专家包内 `.codebuddy-plugin/plugin.json` 均可正常读取
 - [ ] 报告管线脚本就位：st-zhongtai-ic 与 sector-equity-research 的
       `skills/pdf-typesetting/scripts/pipeline/` 下存在 7 个文件
       （md2html_full.py / md2docx.py / md2pdf_pro.py / generate_pdfs.py /

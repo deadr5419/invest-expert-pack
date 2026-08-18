@@ -13,14 +13,13 @@ WorkBuddy 投资研究专家团（Team 型投委会）+ 书籍蒸馏知识库，
 
 ```
 投研开源包/
-├── expert-market/          # WorkBuddy 自定义专家市场（6 个专家包，即装即用）
+├── expert-market/          # WorkBuddy 自定义专家市场（5 个专家包，即装即用）
 │   └── plugins/
 │       ├── st-zhongtai-ic/             # ST众泰投委会（团队：主任+三大V+研深行）
 │       ├── lugong-investment-master/    # 鹿鼎公独立专家
 │       ├── shanxing-investment-master/  # 山行独立专家
 │       ├── huishou-utilize-reinvest-expert/  # 回收再利用独立专家
-│       ├── sector-equity-research/      # 研深行（研究员）
-│       └── quant-strategy-lab/          # 量化策略实验室
+│       └── sector-equity-research/      # 研深行（研究员）
 └── 书籍蒸馏/               # 三书蒸馏知识库（《周期、估值与人性》《美股70年》《全球股市启示录》）
     ├── 03_观点条目库/       # 108 条规律 + 157 条现象（规律已过三重验证）
     ├── 04_框架提炼/         # 凌鹏三变量框架 / 燕翔六支柱 / 跨书主题矩阵
