@@ -1,0 +1,93 @@
+{
+ "book": "全球股市启示录",
+ "chapters": [
+  {
+   "no": 1,
+   "file": "01_第一章 全球股票市场总体概况.md",
+   "title": "第一章 全球股票市场总体概况",
+   "print_pages": "3-17",
+   "chars": 14563,
+   "anchor_count": 8
+  },
+  {
+   "no": 2,
+   "file": "02_第二章 美国_长牛典范.md",
+   "title": "第二章 美国：长牛典范",
+   "print_pages": "21-63",
+   "chars": 38703,
+   "anchor_count": 22
+  },
+  {
+   "no": 3,
+   "file": "03_第三章 英国_老牌帝国与传统行业.md",
+   "title": "第三章 英国：老牌帝国与传统行业",
+   "print_pages": "67-115",
+   "chars": 38146,
+   "anchor_count": 24
+  },
+  {
+   "no": 4,
+   "file": "04_第四章 德国___制造强国、隐形冠军.md",
+   "title": "第四章 德国：**制造强国、隐形冠军",
+   "print_pages": "119-161",
+   "chars": 36128,
+   "anchor_count": 22
+  },
+  {
+   "no": 5,
+   "file": "05_第五章 日本_增长、泡沫、转型.md",
+   "title": "第五章 日本：增长、泡沫、转型",
+   "print_pages": "165-213",
+   "chars": 40064,
+   "anchor_count": 25
+  },
+  {
+   "no": 6,
+   "file": "06_第六章 韩国_韩式市场经济.md",
+   "title": "第六章 韩国：韩式市场经济",
+   "print_pages": "217-257",
+   "chars": 33085,
+   "anchor_count": 21
+  },
+  {
+   "no": 7,
+   "file": "07_第七章 中国香港_立足中国、放眼全球.md",
+   "title": "第七章 中国香港：立足中国、放眼全球",
+   "print_pages": "261-303",
+   "chars": 36260,
+   "anchor_count": 22
+  },
+  {
+   "no": 8,
+   "file": "08_第八章 中国台湾_科技股独大.md",
+   "title": "第八章 中国台湾：科技股独大",
+   "print_pages": "307-345",
+   "chars": 30825,
+   "anchor_count": 20
+  },
+  {
+   "no": 9,
+   "file": "09_第九章 全球股市共性特征总结.md",
+   "title": "第九章 全球股市共性特征总结",
+   "print_pages": "349-381",
+   "chars": 30618,
+   "anchor_count": 17
+  },
+  {
+   "no": 10,
+   "file": "10_第十章 全球股市行业板块表现总结.md",
+   "title": "第十章 全球股市行业板块表现总结",
+   "print_pages": "385-447",
+   "chars": 47449,
+   "anchor_count": 32
+  },
+  {
+   "no": 11,
+   "file": "11_第十一章 价值投资分析框架总结.md",
+   "title": "第十一章 价值投资分析框架总结",
+   "print_pages": "451-490",
+   "chars": 26202,
+   "anchor_count": 31
+  }
+ ]
+}

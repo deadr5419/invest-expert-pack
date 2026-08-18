@@ -1,0 +1,5 @@
+{
+  "schema_version": "xparse_task_context.v1",
+  "user_intent": "两本扫描版投资书籍（《美股70年》《全球股市启示录》）做OCR文字识别，先小样本测试识别质量，达标后批量转为可检索文本",
+  "tool_call_reason": "需要提取扫描版PDF的文字内容和表格数据，用于书籍知识蒸馏"
+}

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 凭据与配置（红线：任何 API key / token 文件绝不入库）
+.env
+.env.*
+*.key
+*config*.json
+!**/.codebuddy-plugin/plugin.json
+tushare_token*
+wind_config*
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# 临时文件
+*.tmp
+*.log
+!**/QA报告*.md

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{{报告标题}}（{{日期}}）</title>
+<style>
+/* 此处内联 report-style.css 全部内容 */
+</style>
+</head>
+<body>
+
+<!-- ① 封面页（必备） -->
+<div class="cover">
+  <div class="series">ST众泰投委会 · 深度研究</div>
+  <h1>{{报告标题}}</h1>
+  <div class="sub">{{标的名称（代码）或系列标的一览}}</div>
+  <div class="meta">
+    数据快照：{{日期}}（{{数据来源与核验方式}}）<br>
+    投委会主任：闻鉴衡 ｜ 研究员：研深行<br>
+    委员：超级鹿鼎公 · 山行 · 回收再利用
+  </div>
+  <div class="box">本报告仅供研究参考，不构成个人投资建议</div>
+</div>
+
+<!-- ② 目录页（必备；系列报告须带各标的目标价摘要） -->
+<div class="toc">
+  <h2>目录</h2>
+  <ol>
+    <li><a href="#r1">{{章节或篇目}} {{目标价摘要（系列报告必填）}}</a></li>
+  </ol>
+</div>
+
+<!-- ③ 正文：W1 单篇一个 .report；W2 系列每篇一个 .report（00 行业总览在前） -->
+<div class="report" id="r1">
+  <h1>{{篇目标题}}</h1>
+  <p><strong>{{标的（代码）}}</strong> 报告日期：{{日期}} ｜ 撰写：投委会研究员 研深行 ｜ 数据基准：{{日期}}</p>
+  <blockquote><p>本报告仅供研究参考，不构成个人投资建议。</p></blockquote>
+  <hr />
+  <h2>一、结论先行</h2>
+  <!-- 评级总览表：标的/现价/评级/保守目标价中值（卖点分列）/隐含空间/核心估值方法/核心假设 -->
+  <!-- 其后按 W1 十章或 W2 八节骨架展开 -->
+</div>
+
+</body>
+</html>

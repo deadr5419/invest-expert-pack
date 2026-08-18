@@ -1,0 +1,8 @@
+file not found: /c/Users/Administrator/Desktop/市场研究/大V研究/书籍蒸馏/01_原文藏书/全球股市启示录/全球股市启示录_燕翔_2022.pdf
+> [ask human] verify /c/Users/Administrator/Desktop/市场研究/大V研究/书籍蒸馏/01_原文藏书/全球股市启示录/全球股市启示录_燕翔_2022.pdf exists and is accessible
+file not found: /c/Users/Administrator/Desktop/市场研究/大V研究/书籍蒸馏/01_原文藏书/全球股市启示录/全球股市启示录_燕翔_2022.pdf
+> [ask human] verify /c/Users/Administrator/Desktop/市场研究/大V研究/书籍蒸馏/01_原文藏书/全球股市启示录/全球股市启示录_燕翔_2022.pdf exists and is accessible
+40302：上传文件大小不符，文件大小不超过 10M
+> [ask human] file exceeds size limit (free API: 10MB, paid API: 500MB); compress/split the file, or switch to paid API with --api paid
+40302：上传文件大小不符，文件大小不超过 10M
+> [ask human] file exceeds size limit (free API: 10MB, paid API: 500MB); compress/split the file, or switch to paid API with --api paid

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 私有仓库分享 · 操作指南</title>
+<style>
+  :root { --bg:#f7f8fa; --card:#ffffff; --line:#e4e7ec; --text:#1f2328; --sub:#57606a; --blue:#0969da; --green:#1a7f37; --red:#cf222e; --amber:#9a6700; --code:#f6f8fa; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"Microsoft YaHei","PingFang SC",sans-serif; background:var(--bg); color:var(--text); padding:32px 16px; line-height:1.7; }
+  .wrap { max-width:860px; margin:0 auto; }
+  h1 { font-size:26px; margin-bottom:6px; }
+  .sub { color:var(--sub); font-size:14px; margin-bottom:28px; }
+  h2 { font-size:19px; margin:34px 0 12px; padding-left:10px; border-left:4px solid var(--blue); }
+  h3 { font-size:15px; margin:16px 0 8px; color:var(--text); }
+  p { margin:8px 0; font-size:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 20px; margin:12px 0; }
+  code { background:var(--code); border:1px solid var(--line); border-radius:4px; padding:1px 6px; font-family:Consolas,"Courier New",monospace; font-size:13px; }
+  pre { background:var(--code); border:1px solid var(--line); border-radius:8px; padding:14px 16px; overflow-x:auto; margin:10px 0; font-size:13px; line-height:1.6; }
+  pre code { background:none; border:none; padding:0; }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:13.5px; }
+  th,td { border:1px solid var(--line); padding:8px 12px; text-align:left; }
+  th { background:#eef1f6; font-weight:600; }
+  .warn { background:#fff8e6; border:1px solid #f0d48a; border-radius:8px; padding:12px 16px; margin:12px 0; font-size:13.5px; }
+  .ok { background:#e8f6ec; border:1px solid #a5d6b3; border-radius:8px; padding:12px 16px; margin:12px 0; font-size:13.5px; }
+  .danger { background:#fdeeee; border:1px solid #f0b4b8; border-radius:8px; padding:12px 16px; margin:12px 0; font-size:13.5px; }
+  .step { display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:50%; background:var(--blue); color:#fff; font-weight:700; font-size:14px; margin-right:8px; }
+  .note { color:var(--sub); font-size:13px; }
+  .key { color:var(--green); font-weight:600; }
+  .risk { color:var(--red); font-weight:600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>GitHub 私有仓库分享 · 操作指南</h1>
+  <div class="sub">投研开源包配套文档 ｜ 目标：把 439M 的开源包私有分享给指定朋友 ｜ 全程约 30 分钟</div>
+
+  <div class="ok">✅ <b>你的环境已就绪</b>：Git 2.55.0 已安装，无需额外装软件。本指南按命令行操作编写（Git Bash）。</div>
+
+  <div class="card">
+    <p><b>全流程速览：</b></p>
+    <p><span class="step">1</span> 注册/登录 GitHub 账号 → <span class="step">2</span> 新建<b>私有</b>仓库 → <span class="step">3</span> 本地推送 439M 内容 → <span class="step">4</span> 生成访问令牌（认证） → <span class="step">5</span> 邀请朋友加入 → 朋友下载 ZIP 即完成</p>
+  </div>
+
+  <h2>第 1 步 · 注册 / 登录 GitHub</h2>
+  <div class="card">
+    <p>1. 打开 <code>https://github.com</code>，右上角 <b>Sign up</b> 注册（邮箱 + 密码 + 用户名），或直接登录已有账号。</p>
+    <p>2. 注册后到邮箱点验证链接完成激活。用户名建议用拼音或英文（如 <code>zhangsan-invest</code>），后续仓库链接会带上它。</p>
+    <div class="warn">⚠️ 全程建议<b>先开代理</b>（Clash/V2Ray 开启即可）：GitHub 网页在大陆直连不稳定，后面推 439M 大文件更是必须走代理。</div>
+  </div>
+
+  <h2>第 2 步 · 新建「私有」仓库（网页操作）</h2>
+  <div class="card">
+    <p>1. 登录后点右上角 <b>＋</b> → <b>New repository</b>。</p>
+    <p>2. Repository name 填：<code>invest-expert-pack</code>（可自定义）。</p>
+    <p>3. <b class="key">关键：Visibility 必须选 Private（私有）</b>——选 Public 就等于全世界可见，你的原书 PDF 和整理内容会公开。</p>
+    <p>4. 下方 <b>不要勾选</b> README / .gitignore / License（本地包里已有，勾了会冲突）。</p>
+    <p>5. 点 <b>Create repository</b>，会跳到一个"空仓库"页面，<b>先别关</b>，第 3 步要用页面上的仓库地址。</p>
+    <div class="danger">🚫 如果误建成了 Public（公开），进入仓库 → Settings → 拉到最底部 Danger Zone → Change visibility → 改为 Private。公开过的仓库会被搜索引擎收录，改了可见性也不能完全抹除痕迹。</div>
+  </div>
+
+  <h2>第 3 步 · 本地推送（Git Bash 命令行）</h2>
+  <div class="card">
+    <p>打开 Git Bash（在桌面空白处右键 → <b>Git Bash Here</b>），逐条粘贴以下命令（把 <code>你的账号</code>、<code>仓库名</code> 换成你的实际值）：</p>
+    <pre><code>cd "C:/Users/Administrator/Desktop/市场研究/投研开源包"
+
+# 首次使用 Git 需先设置身份（只做一次）
+git config --global user.name "你的GitHub用户名"
+git config --global user.email "你的GitHub邮箱"
+
+# 初始化并提交
+git init
+git branch -M main
+git add .
+git commit -m "投研专家团+书籍蒸馏知识库 v1.0"
+
+# 连接远程私有仓库并推送
+git remote add origin https://github.com/你的账号/invest-expert-pack.git
+git push -u origin main</code></pre>
+    <p>2. push 时第一次会让你输用户名和密码——<b>密码处填的不是账号密码，而是第 4 步生成的令牌</b>。</p>
+    <p>3. push 过程中若中途断流（你机器的大文件断流特性），<b>直接重新执行 <code>git push</code> 即可</b>，会自动断点续传，不用重来。</p>
+    <div class="warn">⚠️ <b>代理必须在 push 前开好</b>：Clash/V2Ray 开启后，Git Bash 会自动读取系统代理（127.0.0.1:7890）。若 push 报 <code>Failed to connect to github.com port 443: Timed out</code>，就是代理没生效，开代理后重试。</div>
+  </div>
+
+  <h2>第 4 步 · 生成访问令牌（Personal Access Token，一次性）</h2>
+  <div class="card">
+    <p>GitHub 2021 年起<b>不再支持用账号密码 push</b>，必须用令牌或 SSH。令牌生成步骤：</p>
+    <p>1. GitHub 右上角头像 → <b>Settings</b> → 左侧最底部 <b>Developer settings</b>。</p>
+    <p>2. <b>Personal access tokens</b> → <b>Tokens (classic)</b> → <b>Generate new token (classic)</b>。</p>
+    <p>3. Note 随便填（如 <code>push-invest-pack</code>）；Expiration 选 90 天（过期后要重新生成）；<b>勾选 <code>repo</code> 权限</b>（整个 repo 组都要勾上）。</p>
+    <p>4. 点最底部 <b>Generate token</b> → 生成一串 <code>ghp_xxxx</code> 开头的令牌。<b class="risk">只显示这一次，立即复制保存</b>（可临时贴到记事本）。</p>
+    <p>5. 回 Git Bash push 时：Username 填你的 GitHub 用户名，Password 填这串令牌（粘贴后不显示是正常的，直接回车）。</p>
+    <p>6. 想省掉以后每次输令牌：执行 <code>git config --global credential.helper store</code>，第一次输过后会记住。</p>
+  </div>
+
+  <h2>第 5 步 · 邀请朋友（协作者）</h2>
+  <div class="card">
+    <p>1. 打开你的仓库页面：<code>https://github.com/你的账号/invest-expert-pack</code>。</p>
+    <p>2. 顶部 <b>Settings</b> → 左侧 <b>Collaborators</b>（或 Manage access）。</p>
+    <p>3. 点 <b>Add people</b>，输入朋友的 GitHub 用户名或注册邮箱 → 选择 <b>Write</b> 权限（只读也够，Read 即可）→ 发送邀请。</p>
+    <p>4. 朋友接受邀请后即可访问该私有仓库。</p>
+    <div class="note">💡 朋友没有 GitHub 账号的话，让他先注册一个（免费）。私有仓库的访问是"跟着账号走"的。</div>
+  </div>
+
+  <h2>第 6 步 · 朋友侧怎么用（不需要装 Git）</h2>
+  <div class="card">
+    <p>朋友<b>不需要安装 Git、不需要懂命令行</b>。两种方式任选：</p>
+    <table>
+      <tr><th>方式</th><th>操作</th><th>适用</th></tr>
+      <tr><td><b>网页下载 ZIP</b></td><td>打开仓库链接 → 绿色 <b>Code</b> 按钮 → <b>Download ZIP</b> → 解压即得全部内容</td><td>最省事，推荐</td></tr>
+      <tr><td>git clone</td><td>朋友装 Git 后执行 <code>git clone https://github.com/你的账号/invest-expert-pack.git</code>（首次需输入自己的 GitHub 账号+令牌）</td><td>朋友想持续跟随更新</td></tr>
+    </table>
+    <p>朋友拿到后按包里 <code>README.md</code> 的三步安装：专家市场放 <code>~/.workbuddy/plugins/marketplaces/</code> → 书籍蒸馏放研究目录 → 自配数据源。</p>
+  </div>
+
+  <h2>常见问题速查</h2>
+  <div class="card">
+    <table>
+      <tr><th>问题</th><th>解决</th></tr>
+      <tr><td>push 报 Timed out / 连接失败</td><td>代理没开或没生效。开 Clash/V2Ray 后重试；Git Bash 会自动读 7890 代理</td></tr>
+      <tr><td>push 到一半断了</td><td>直接重跑 <code>git push</code>，断点续传，不用重新 add/commit</td></tr>
+      <tr><td>push 报 Authentication failed</td><td>密码处填的是令牌（ghp_ 开头），不是账号密码；令牌过期就重新生成</td></tr>
+      <tr><td>令牌丢了</td><td>到 Developer settings → Tokens 里删除旧的，重新生成一个新的</td></tr>
+      <tr><td>误建成 Public 了</td><td>仓库 Settings → 底部 Danger Zone → Change visibility → Private</td></tr>
+      <tr><td>朋友打不开链接</td><td>朋友还没接受协作者邀请，或没注册账号；先加他为 Collaborator</td></tr>
+      <tr><td>朋友下载很慢</td><td>GitHub 下载大文件在国内不稳定，让朋友也开代理；或走网盘补发</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <p><b>最后提醒：</b>私有仓库 ≠ 绝对私密，受邀的朋友理论上仍可转传，所以分发对象限定为信得过的人。原书 PDF 仅供朋友个人学习，README 里已注明不可再传播。</p>
+  </div>
+</div>
+</body>
+</html>

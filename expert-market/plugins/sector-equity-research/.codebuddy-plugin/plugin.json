@@ -1,0 +1,64 @@
+{
+  "name": "sector-equity-research",
+  "version": "1.0.0",
+  "description": "Integrated sector-to-stock deep research expert: anchors every single-name analysis in its industry landscape (S-C-P structure, competitive positioning, valuation percentile), then runs full equity due diligence (DCF/comps, earnings, long-short pitches, memos, event scenarios) and closes with a PM-style rating, target price and action classification.",
+  "author": {
+    "name": "WorkBuddy",
+    "email": ""
+  },
+  "agents": ["./agents/sector-equity-research.md"],
+  "skills": [
+    "./skills/catalyst-calendar",
+    "./skills/company-tearsheet",
+    "./skills/competitive-analysis",
+    "./skills/comps-valuation",
+    "./skills/dcf-model-builder",
+    "./skills/earnings-analysis",
+    "./skills/event-scenario-analyzer",
+    "./skills/idea-generation",
+    "./skills/industry-analysis-method",
+    "./skills/initiating-coverage",
+    "./skills/long-short-pitch",
+    "./skills/model-update",
+    "./skills/neodata-financial-search",
+    "./skills/pdf-typesetting",
+    "./skills/portfolio-risk",
+    "./skills/pptx-author",
+    "./skills/report-skeleton",
+    "./skills/thesis-tracker",
+    "./skills/westock"
+  ],
+
+  "expertType": "agent",
+  "agentName": "sector-equity-research",
+
+  "displayName": {
+    "en": "Sector-Equity Deep Research",
+    "zh": "研深行"
+  },
+  "profession": {
+    "en": "Sector & Equity Research Expert",
+    "zh": "行业×个股深度研究专家"
+  },
+  "displayDescription": {
+    "en": "Anchors every stock analysis in its industry landscape first, then runs DCF/comps valuation and long-short arguments, outputting rating, target price and action recommendation.",
+    "zh": "融合行业全景与个股深度：先锚定赛道景气与竞争位置，再做DCF估值与多空论证，输出评级目标价与行动建议"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "08-FinanceInvestment",
+  "defaultInitPrompt": {
+    "zh": "深度分析一下中国神华：先讲清煤炭行业景气与它的竞争位置，再做DCF估值与评级",
+    "en": "Do a deep-dive on China Shenhua: start with the coal industry cycle and its competitive position, then run DCF valuation and give a rating."
+  },
+  "plugin": "sector-equity-research",
+  "tags": [
+    { "en": "Sector Research", "zh": "行业研究" },
+    { "en": "Equity Deep Dive", "zh": "个股深度" },
+    { "en": "Valuation & Decision", "zh": "估值决策" }
+  ],
+  "quickPrompts": [
+    { "en": "Do a deep-dive on China Shenhua: start with the coal industry cycle and its competitive position, then run DCF valuation and give a rating.", "zh": "深度分析一下中国神华：先讲清煤炭行业景气与它的竞争位置，再做DCF估值与评级" },
+    { "en": "Which sub-sector in high-dividend equities offers the best risk-reward right now? Give me an industry panorama and a 3-name shortlist.", "zh": "当前高股息板块里哪个细分赛道性价比最高？给出行业全景和选股短名单" },
+    { "en": "I hold XXX. Run event scenario analysis and a portfolio risk check on my position.", "zh": "我持有XX，帮我做事件情景分析和组合风险检查" }
+  ]
+}

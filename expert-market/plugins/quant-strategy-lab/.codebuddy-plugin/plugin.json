@@ -1,0 +1,80 @@
+{
+  "name": "quant-strategy-lab",
+  "version": "1.0.0",
+  "description": "A quantitative strategy backtest and research team for A-share and HK stock markets.",
+  "author": {
+    "name": "WorkBuddy",
+    "email": ""
+  },
+  "agents": [
+    "./agents/quant-strategy-lab-team-lead.md",
+    "./agents/quant-engineer.md",
+    "./agents/strategy-analyst.md",
+    "./agents/risk-officer.md"
+  ],
+  "expertType": "team",
+  "agentName": "quant-strategy-lab-team-lead",
+  "teamInfo": {
+    "leadAgent": "quant-strategy-lab-team-lead",
+    "memberAgents": ["quant-engineer", "strategy-analyst", "risk-officer"]
+  },
+  "displayName": {
+    "en": "Quant Strategy Lab",
+    "zh": "量化策略研习社"
+  },
+  "profession": {
+    "en": "Quant Strategy Lab",
+    "zh": "量化策略研习社"
+  },
+  "displayDescription": {
+    "en": "A quantitative backtest and research team for A-share and HK stocks, from dividend timing to new strategy exploration, no coding required.",
+    "zh": "专注A股与港股的策略回测与量化研讨，从红利择时打磨到新策略拓展，零代码也能严谨验证交易想法。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "08-FinanceInvestment",
+  "defaultInitPrompt": {
+    "zh": "帮我把红利低波择时策略系统化，A股过去5年回测一下",
+    "en": "Help me systematize my dividend low-volatility timing strategy and backtest it on A-shares over the past 5 years"
+  },
+  "plugin": "quant-strategy-lab",
+  "tags": [
+    { "en": "Quant Backtest", "zh": "量化回测" },
+    { "en": "Dividend Strategy", "zh": "红利策略" },
+    { "en": "A/HK Stocks", "zh": "A股港股" }
+  ],
+  "quickPrompts": [
+    { "en": "Help me systematize my dividend low-volatility timing strategy and backtest it on A-shares over the past 5 years", "zh": "帮我把红利低波择时策略系统化，A股过去5年回测一下" },
+    { "en": "Compare the holding returns and drawdowns of several high-dividend HK ETFs", "zh": "对比几只高股息港股ETF的持有收益和回撤" },
+    { "en": "Backtest a dual-MA momentum strategy so I can explore a new strategy type", "zh": "我想拓展策略类型，先回测一个双均线动量策略看看" }
+  ],
+  "members": [
+    {
+      "id": "quant-strategy-lab-team-lead",
+      "displayName": { "en": "He Zhizhou", "zh": "何执舟" },
+      "profession": { "en": "Chief Strategist", "zh": "首席策略官" },
+      "avatar": "avatars/quant-strategy-lab-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "quant-engineer",
+      "displayName": { "en": "Kou Douma", "zh": "寇豆码" },
+      "profession": { "en": "Quant Engineer", "zh": "量化工程师" },
+      "avatar": "avatars/quant-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "strategy-analyst",
+      "displayName": { "en": "Zhen Hongli", "zh": "甄红利" },
+      "profession": { "en": "Strategy Analyst", "zh": "策略分析师" },
+      "avatar": "avatars/strategy-analyst.png",
+      "role": "member"
+    },
+    {
+      "id": "risk-officer",
+      "displayName": { "en": "Yan Guoguan", "zh": "严过关" },
+      "profession": { "en": "Risk Officer", "zh": "风控官" },
+      "avatar": "avatars/risk-officer.png",
+      "role": "member"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "name": "st-zhongtai-ic",
+  "version": "1.0.0",
+  "description": "A team-type investment committee: routes each task to the best-suited Big-V expert (Lugong / Shanxing / Huishou-Zai-Liyong) or all of them for perspective inputs, then the sector-equity research member synthesizes the report. Data self-verified, conclusions self-derived, conflicts arbitrated by common sense with bull-bear views listed side by side.",
+  "author": {
+    "name": "WorkBuddy",
+    "email": ""
+  },
+  "agents": [
+    "./agents/st-zhongtai-ic-team-lead.md",
+    "./agents/lugong-investment-master.md",
+    "./agents/shanxing-investment-advisor.md",
+    "./agents/huishou-utilize-reinvest-expert.md",
+    "./agents/sector-equity-research.md"
+  ],
+  "skills": [
+    "./skills/lugong-value-invest",
+    "./skills/shanxing-invest-framework",
+    "./skills/huishou-utilize-reinvest",
+    "./skills/catalyst-calendar",
+    "./skills/company-tearsheet",
+    "./skills/competitive-analysis",
+    "./skills/comps-valuation",
+    "./skills/dcf-model-builder",
+    "./skills/earnings-analysis",
+    "./skills/event-scenario-analyzer",
+    "./skills/idea-generation",
+    "./skills/industry-analysis-method",
+    "./skills/initiating-coverage",
+    "./skills/long-short-pitch",
+    "./skills/model-update",
+    "./skills/neodata-financial-search",
+    "./skills/pdf-typesetting",
+    "./skills/portfolio-risk",
+    "./skills/pptx-author",
+    "./skills/report-skeleton",
+    "./skills/thesis-tracker",
+    "./skills/westock"
+  ],
+
+  "expertType": "team",
+  "agentName": "st-zhongtai-ic-team-lead",
+  "teamInfo": {
+    "leadAgent": "st-zhongtai-ic-team-lead",
+    "memberAgents": [
+      "lugong-investment-master",
+      "shanxing-investment-advisor",
+      "huishou-utilize-reinvest-expert",
+      "sector-equity-research"
+    ]
+  },
+
+  "displayName": {
+    "en": "ST Zhongtai Investment Committee",
+    "zh": "ST众泰投委会"
+  },
+  "profession": {
+    "en": "ST Zhongtai Investment Committee",
+    "zh": "ST众泰投委会"
+  },
+  "displayDescription": {
+    "en": "Three Big-V committee members contribute research angles and frameworks, the deep-research member synthesizes the report; data self-verified, conclusions self-derived, conflicts arbitrated by common sense with bull-bear views listed side by side.",
+    "zh": "三位大V委员各供思路框架，研深行汇总撰写；数据自核、结论自得，冲突按常识裁决，多空并列"
+  },
+  "avatar": "avatars/team.jpg",
+  "categoryId": "08-FinanceInvestment",
+  "defaultInitPrompt": {
+    "zh": "深度研究中国神华：让鹿鼎公、山行、回收再利用三位委员各给视角，研深行汇总成报告",
+    "en": "Deep-dive China Shenhua: let the three Big-V members each give their angle, then have the research member synthesize a report."
+  },
+  "plugin": "st-zhongtai-ic",
+  "tags": [
+    { "en": "Multi-Perspective Research", "zh": "多视角研究" },
+    { "en": "Big-V Frameworks", "zh": "大V方法论" },
+    { "en": "Deep Research Reports", "zh": "深度研报" }
+  ],
+  "quickPrompts": [
+    { "en": "Deep-dive China Shenhua: let the three Big-V members each give their angle, then have the research member synthesize a report.", "zh": "深度研究中国神华：让鹿鼎公、山行、回收再利用三位委员各给视角，研深行汇总成报告" },
+    { "en": "Analyze the coal sector from the Big-V perspectives: how would Lugong, Shanxing and Huishou view it?", "zh": "分析煤炭板块：鹿鼎公、山行、回收再利用各自怎么看？" },
+    { "en": "I hold XXX. Have the committee produce a bull-bear comparison report with data verification.", "zh": "我持有XX，让投委会出多空对照分析报告，数据要自己核" }
+  ],
+  "members": [
+    {
+      "id": "st-zhongtai-ic-team-lead",
+      "displayName": { "en": "deadr", "zh": "deadr" },
+      "profession": { "en": "Investment Committee Chair", "zh": "投委会主任" },
+      "avatar": "avatars/st-zhongtai-ic-team-lead.jpg",
+      "role": "lead"
+    },
+    {
+      "id": "lugong-investment-master",
+      "displayName": { "en": "Super Lugong", "zh": "超级鹿鼎公" },
+      "profession": { "en": "Value Investing Master", "zh": "价值投资大师" },
+      "avatar": "avatars/lugong-investment-master.png",
+      "role": "member"
+    },
+    {
+      "id": "shanxing-investment-advisor",
+      "displayName": { "en": "Shanxing", "zh": "山行" },
+      "profession": { "en": "Cyclical Value Investing Master", "zh": "周期价值投资大师" },
+      "avatar": "avatars/shanxing-investment-advisor.jpg",
+      "role": "member"
+    },
+    {
+      "id": "huishou-utilize-reinvest-expert",
+      "displayName": { "en": "Recycle-Reuse", "zh": "回收再利用" },
+      "profession": { "en": "Power Sector Deep-Research Master", "zh": "电力股深度研究大师" },
+      "avatar": "avatars/huishou-utilize-reinvest-expert.png",
+      "role": "member"
+    },
+    {
+      "id": "sector-equity-research",
+      "displayName": { "en": "Sector-Equity Deep Research", "zh": "研深行" },
+      "profession": { "en": "Sector & Equity Research Expert", "zh": "行业×个股深度研究专家" },
+      "avatar": "avatars/sector-equity-research.png",
+      "role": "member"
+    }
+  ]
+}

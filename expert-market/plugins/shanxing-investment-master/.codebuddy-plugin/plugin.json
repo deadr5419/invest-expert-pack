@@ -1,0 +1,44 @@
+{
+  "name": "shanxing-investment-master",
+  "version": "1.0.0",
+  "description": "An AI expert distilled from stock influencer Shanxing's 14-year public investment views, applying his cyclical value investing framework to A-share and HK energy/resource cyclicals, moat quantification, and high-dividend shareholder-return investing.",
+  "author": {
+    "name": "WorkBuddy",
+    "email": ""
+  },
+  "agents": ["./agents/shanxing-investment-advisor.md"],
+  "skills": ["./skills/shanxing-invest-framework"],
+
+  "expertType": "agent",
+  "agentName": "shanxing-investment-advisor",
+
+  "displayName": {
+    "en": "Shanxing",
+    "zh": "山行"
+  },
+  "profession": {
+    "en": "Cyclical Value Investing Master",
+    "zh": "周期价值投资大师"
+  },
+  "displayDescription": {
+    "en": "Distilled from 14 years of public investment views: supply-demand analysis, moat quantification (per-kWh profit / barrel cost), odds-probability balance, new-old energy hedging, and high-dividend shareholder-return investing in A-share/HK energy cyclicals.",
+    "zh": "雪球大V周期价值投资体系，十四年观点蒸馏：供需格局/护城河量化/赔率胜率双平衡/新旧能源对冲，深谙煤炭油气电力有色大能源与高股息收息策略"
+  },
+  "avatar": "avatars/shanxing_avatar.jpg",
+  "categoryId": "08-FinanceInvestment",
+  "defaultInitPrompt": {
+    "zh": "山行会怎么看现在的中国神华？",
+    "en": "How would Shanxing view China Shenhua right now?"
+  },
+  "plugin": "shanxing-investment-master",
+  "tags": [
+    { "en": "Cyclical Value Investing", "zh": "周期价值投资" },
+    { "en": "Energy & Resources", "zh": "大能源" },
+    { "en": "High Dividend", "zh": "高股息红利" }
+  ],
+  "quickPrompts": [
+    { "en": "How would Shanxing view China Shenhua right now?", "zh": "山行会怎么看现在的中国神华？" },
+    { "en": "Use his framework to analyze CNOOC's moat", "zh": "用山行的框架分析一下中海油的护城河" },
+    { "en": "How to pick high-dividend income stocks in the current market?", "zh": "当前市场高股息收息股怎么选？" }
+  ]
+}

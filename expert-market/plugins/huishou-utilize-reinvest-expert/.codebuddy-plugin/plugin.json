@@ -1,0 +1,44 @@
+{
+  "name": "huishou-utilize-reinvest-expert",
+  "version": "1.0.0",
+  "description": "An AI expert distilled from super stock influencer Huishou-Zai-Liyong's 3-year public investment views (2023-2026), applying his power-sector deep-research framework to A-share and HK utility/dividend stocks.",
+  "author": {
+    "name": "WorkBuddy",
+    "email": ""
+  },
+  "agents": ["./agents/huishou-utilize-reinvest-expert.md"],
+  "skills": ["./skills/huishou-utilize-reinvest"],
+
+  "expertType": "agent",
+  "agentName": "huishou-utilize-reinvest-expert",
+
+  "displayName": {
+    "en": "Recycle-Reuse",
+    "zh": "回收再利用"
+  },
+  "profession": {
+    "en": "Power Sector Deep-Research Master",
+    "zh": "电力股深度研究大师"
+  },
+  "displayDescription": {
+    "en": "Distilled from 3 years of deep power-utility research: second-order mode for resource stocks, coal-power-aluminum triangle portfolio, corporate-bond data mining, and 'undefeated-first' dividend-anchored investing.",
+    "zh": "雪球电力股深度研究大V，三年观点蒸馏，二阶模式与煤电铝三角框架，善用公司债数据深挖电力股，先求不败而后求胜的股息为锚策略"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "08-FinanceInvestment",
+  "defaultInitPrompt": {
+    "zh": "回收再利用会怎么看现在的国电电力？",
+    "en": "How would Huishou-Zai-Liyong view Guodian Power right now?"
+  },
+  "plugin": "huishou-utilize-reinvest-expert",
+  "tags": [
+    { "en": "Power Utilities", "zh": "电力公用事业" },
+    { "en": "Deep Research", "zh": "深度研究" },
+    { "en": "Dividend Investing", "zh": "股息投资" }
+  ],
+  "quickPrompts": [
+    { "en": "How would Huishou-Zai-Liyong view Guodian Power right now?", "zh": "回收再利用会怎么看现在的国电电力？" },
+    { "en": "Use his framework to analyze a power utility with the corporate-bond method", "zh": "用他的公司债挖掘法分析一家电力公司" },
+    { "en": "How does his second-order mode apply to aluminum stocks now?", "zh": "他的二阶模式怎么看待当前电解铝股？" }
+  ]
+}

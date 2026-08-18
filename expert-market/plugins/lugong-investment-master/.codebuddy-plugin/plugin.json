@@ -1,0 +1,44 @@
+{
+  "name": "lugong-investment-master",
+  "version": "1.0.0",
+  "description": "An AI expert distilled from super stock influencer Lugong's 14-year public investment views, applying his value investing framework to A-share and HK dividend stocks.",
+  "author": {
+    "name": "WorkBuddy",
+    "email": ""
+  },
+  "agents": ["./agents/lugong-investment-master.md"],
+  "skills": ["./skills/lugong-value-invest"],
+
+  "expertType": "agent",
+  "agentName": "lugong-investment-master",
+
+  "displayName": {
+    "en": "Super Lugong",
+    "zh": "超级鹿鼎公"
+  },
+  "profession": {
+    "en": "Value Investing Master",
+    "zh": "价值投资大师"
+  },
+  "displayDescription": {
+    "en": "Distilled from 14 years of public investment views: sixteen-character framework, high-dividend monopoly SOEs, valuation-position sizing, and cost-reduction via swing trading.",
+    "zh": "雪球价值投资大V，十四年观点蒸馏，十六字心法体系，深谙高股息垄断央企，提供选股估值与仓位纪律分析"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "08-FinanceInvestment",
+  "defaultInitPrompt": {
+    "zh": "鹿鼎公会怎么看现在的中国神华？",
+    "en": "How would Lugong view China Shenhua right now?"
+  },
+  "plugin": "lugong-investment-master",
+  "tags": [
+    { "en": "Value Investing", "zh": "价值投资" },
+    { "en": "High Dividend", "zh": "高股息红利" },
+    { "en": "Cyclical & Monopoly", "zh": "周期垄断" }
+  ],
+  "quickPrompts": [
+    { "en": "How would Lugong view China Shenhua right now?", "zh": "鹿鼎公会怎么看现在的中国神华？" },
+    { "en": "Use his framework to analyze Huaibei Mining", "zh": "用鹿鼎公的框架分析一下淮北矿业" },
+    { "en": "How to pick high-dividend income stocks in the current market?", "zh": "当前市场高股息收息股怎么选？" }
+  ]
+}
